@@ -37,8 +37,10 @@ Kickstarted 15:19 19-Jul-2018
 
 ......
 
-**PS:** 我们公司是由很多节点的，登陆节点、软件节点、计算节点、测试节点等，不同的节点有不同的用处。登陆的时候是处于登陆节点下，顾名思义这个节点仅是用来登陆的，非常脆弱所以不要在这里跑什么任务，小心被同事在群里死亡大点名。
-因此登陆进集群之后赶紧通过命令`ssh xcomputer-#-##`换到测试节点，在里面做一些日常任务。如果需要跑任务，可以通过命令`qsub`提交任务到计算节点，这样就可以在计算节点上跑任务了，后面会讲。
+**PS:** 我们公司是由很多节点的，登陆节点、软件节点、计算节点、测试节点等，不同的节点有不同的用处。登陆的时候是处于登陆节点下，顾名思义这个节点仅是用来登陆的，非常脆弱所以不要在这里跑什么任务，小心被同事在群里死亡大点名。  
+
+因此登陆进集群之后赶紧通过命令`ssh cngb-xcompute-#-#`换到测试节点，在里面做一些日常任务。如果需要跑任务，可以通过命令`qsub`提交任务到计算节点，这样就可以在计算节点上跑任务了，后面会讲。  
+
 软件节点就是用来安装软件的，但是这个网速中真的非常非常慢，真的服气。
 ### 安装虚拟机
 
@@ -63,6 +65,75 @@ Kickstarted 15:19 19-Jul-2018
 
 **迁移D盘：** [迁移wsl2子系统文件目录](https://juejin.cn/post/7024498662935904269)
 
-## conda环境配置
+## 虚拟环境配置
+生信分析会涉及很多软件，不同软件要求的环境配置也不一样，就好比有些软件需要python 2 但有些软件需要python 3，中国有句古话，叫做~~识时务者为俊杰~~“鱼与熊掌不可兼得”，就需要我们根据不同的软件配置不同的环境。
 
-https://github.com/yf8578/Zhang-s-BioBook/blob/main/chapter0/asset/%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF20231123141357.png
+就好像在一个大房子里有很多不同的屋子，每个屋子之间相互独立，用到不同的软件时就进到不同的屋子里。
+
+### mamba安装
+
+
+### conda环境配置
+conda 是一个开源的软件包管理系统和环境管理系统，用于安装多个版本的软件包及其依赖关系，并在它们之间轻松切换。 Conda 是为 Python 程序创建的，适用于 Linux，OS X 和Windows，也可以打包和分发其他软件。  
+
+conda分为anaconda和miniconda。anaconda是包含一些常用包的版本（这里的常用不代表你常用 微笑.jpg），miniconda则是精简版，需要啥装啥，所以推荐使用miniconda。
+
+#### conda安装
+
+```shell
+wget -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
+## 当然因为集群的网速很慢，也可以直接去官网下载，然后上传到服务器上，再运行后面的命令
+chmod 777 Miniconda3-latest-Linux-x86_64.sh #给执行权限
+bash Miniconda3-latest-Linux-x86_64.sh #运行
+```
+
+#### conda换源
+
+```shell
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+```
+#### 其他命令
+```shell
+// 显示安装的频道
+conda config --set show_channel_urls yes 
+// 查看已经添加的channels
+conda config --get channels
+// 已添加的channel在哪里查看
+vim ~/.condarc
+```
+#### 利用conda安装生物信息软件
+```shell
+conda search gatk
+conda install gatk
+which gatk
+// 如需要安装特定的版本:conda install 软件名=版本号
+conda install gatk=3.7
+// 这时conda会先卸载已安装版本，然后重新安装指定版本。
+// 查看已安装软件:
+conda list
+// 更新指定软件:
+conda update gatk
+// 卸载指定软件:
+conda remove gatk
+```
+#### 利用conda创建、删除虚拟环境
+之前创建的时候显示的是（base）这是conda的基本环境，有些软件依赖的是python2的版本，当你还是使用你的base的时候你的base里的python会被自动降级，有可能会引发别的软件的报错，所以，可以给一些特别的软件一些特别的关照，比如创建一个单独的环境。
+在conda环境下，输入`conda env list`（或者输入`conda info --envs`）查看当前存在的环境
+
+```shell
+#创建虚拟环境
+conda create -n py2 python=2
+conda create -n py3 python=3
+conda activate py2
+which python
+python --version
+conda deactivate
+conda activate py3
+which python
+python --version
+#删除虚拟环境
+conda remove -n myenv --all
+```
