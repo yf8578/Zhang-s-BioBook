@@ -42,14 +42,16 @@ Kickstarted 15:19 19-Jul-2018
 **安装子系统：**
 
 1. 打开控制面板<br />
-<img src="asset\%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF20231123141357.png" align=center alt="setting">
+<img src="_asset\控制面板20231123141357.png" align=center alt="setting">
 1. 打开相关设置<br />
-<img src="asset\%E6%89%93%E5%BC%80wsl20231123141427.png" align=center alt="setting">
+<img src="_asset\%E6%89%93%E5%BC%80wsl20231123141427.png" align=center alt="setting">
 1. 微软商店搜索wsl安装合适的版本<br />
-<img src="asset\msstore20231123140927.png" align=center alt="msstore">
+<img src="_asset\msstore20231123140927.png" align=center alt="msstore">
 1. 安装完成后，打开子系统，输入用户名和密码，就可以使用了。<br />
-<img src="asset\wsl20231123141828.png" align=ceter alt="loginwsl" width = "300%">
+<img src="_asset\wsl20231123141828.png" align=ceter alt="loginwsl" width = "300%">
 
 **迁移D盘：** [迁移wsl2子系统文件目录](https://juejin.cn/post/7024498662935904269)
 
-## conda配置换环境
+## conda环境配置
+
+https://github.com/yf8578/Zhang-s-BioBook/blob/main/chapter0/asset/%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF20231123141357.png
