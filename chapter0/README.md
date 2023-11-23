@@ -43,7 +43,7 @@ Kickstarted 15:19 19-Jul-2018
 1. 打开控制面板
 ![Alt text](../_book/gitbook/images/%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF20231123141357.png)
 
-2. 打开相关设置
+2. 打开相关设置<br />
 ![Alt text](../_book/gitbook/images/%E6%89%93%E5%BC%80wsl20231123141427.png)
 
 3. 微软商店搜索wsl安装合适的版本
