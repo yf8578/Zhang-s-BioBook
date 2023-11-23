@@ -41,12 +41,13 @@ Kickstarted 15:19 19-Jul-2018
 **安装子系统：**
 
 1. 打开控制面板<br />
-![Alt text](../_book/gitbook/images/%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF20231123141357.png)
-2. 打开相关设置
-![Alt text](../_book/gitbook/images/%E6%89%93%E5%BC%80wsl20231123141427.png)
-3. 微软商店搜索wsl安装合适的版本
-![微软商店](../_book/gitbook/images/msstore20231123140927.png)
-4. 安装完成后，打开子系统，输入用户名和密码，就可以使用了。
-![Alt text](../_book/gitbook/images/wsl20231123141828.png)
-<br />
+<img src="asset\%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF20231123141357.png" align=center alt="setting">
+1. 打开相关设置<br />
+<img src="asset\%E6%89%93%E5%BC%80wsl20231123141427.png" align=center alt="setting">
+1. 微软商店搜索wsl安装合适的版本<br />
+<img src="asset\msstore20231123140927.png" align=center alt="msstore">
+1. 安装完成后，打开子系统，输入用户名和密码，就可以使用了。<br />
+<img src="asset\wsl20231123141828.png" align=ceter alt="loginwsl" width = "300%">
+
 **迁移D盘：** https://juejin.cn/post/7024498662935904269
+
