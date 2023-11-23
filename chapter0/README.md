@@ -1,15 +1,17 @@
 # 准备工作
-## Linux环境
-对于Linux环境，如果是MacOS或者Linux系统，可以直接使用系统自带的终端，如果是Windows系统，可以使用Windows的子系统，或者使用虚拟机安装Linux系统，下面分别介绍这三种方法。
-像一些小的数据或者是自己用来练习的数据，可以直接在本地进行处理，但是如果是大数据，或者是需要长时间运行的程序，就需要在服务器上进行处理，这里推荐使用服务器，因为服务器的配置比较高，而且可以长时间运行，不会像本地电脑一样，运行一段时间就会出现卡顿的情况。
-~~还有一个原因，毕竟是服务器嘛，公家的东西不用白不用。~~
+
+nux环境
+
+对于Linux环境，如果是MacOS或者Linux系统，可以直接使用系统自带的终端，如果是Windows系统，可以使用Windows的子系统，或者使用虚拟机安装Linux系统，下面分别介绍这三种方法。 像一些小的数据或者是自己用来练习的数据，可以直接在本地进行处理，但是如果是大数据，或者是需要长时间运行的程序，就需要在服务器上进行处理，这里推荐使用服务器，因为服务器的配置比较高，而且可以长时间运行，不会像本地电脑一样，运行一段时间就会出现卡顿的情况。 ~~还有一个原因，毕竟是服务器嘛，公家的东西不用白不用。~~
+
 1. 登陆服务器
 2. 安装虚拟机
 3. Windows安装子系统
+
 ### 登陆服务器
-无论是Windows还是MAcOS，都可以使用ssh登陆服务器。
-`ssh username@serverip -p 22`其中username是你的用户名，serverip是服务器的ip地址，-p 22是端口号，如果是默认的端口号，可以不用加这个参数。
-如果是Windows系统，可以直接打开PowerShell，输入,就像下面这样：
+
+无论是Windows还是MAcOS，都可以使用ssh登陆服务器。 `ssh username@serverip -p 22`其中username是你的用户名，serverip是服务器的ip地址，-p 22是端口号，如果是默认的端口号，可以不用加这个参数。 如果是Windows系统，可以直接打开PowerShell，输入,就像下面这样：
+
 ```
 Windows PowerShell
 版权所有（C） Microsoft Corporation。保留所有权利。
@@ -26,29 +28,41 @@ Profile built 15:01 19-Jul-2018
 Kickstarted 15:19 19-Jul-2018
 [zhangyifan1@cngb-login-0-10 13:44:28 (#╯°Д°)╯︵┻━┻ ~]$
 ```
-这样就登陆成功了，如果是第一次登陆，会提示你是否要接受服务器的公钥，输入yes就可以了。
-如果是Macos操作是一样的,~~**可惜我没Mac。**~~
-除了电脑自带的终端，还有一些好用的第三方终端，如：
+
+这样就登陆成功了，如果是第一次登陆，会提示你是否要接受服务器的公钥，输入yes就可以了。 如果是Macos操作是一样的,~~**可惜我没Mac。**~~ 除了电脑自带的终端，还有一些好用的第三方终端，如：
+
 1. [Tabby](https://tabby.sh/)
 2. [Xshell](https://www.netsarang.com/en/xshell/)
 3. [MobaXterm](https://mobaxterm.mobatek.net/)
 
 ......
-### 安装虚拟机
-这个我个人觉得不大方便，如果想安装的话可以参考这篇推文:[超详细的VMware虚拟机安装Linux图文教程保姆级](https://blog.csdn.net/weixin_61536532/article/details/129778310)
-### Windows安装子系统
-这里推荐使用Ubuntu子系统，因为Ubuntu子系统的安装比较简单，而且使用起来也比较方便。且推荐安装在D盘，因为D盘的读写速度比较快，而且不会占用C盘的空间。
-我使用的方法是在微软商店中安装，之后再迁移到D盘中。
-**安装子系统：**
 
-1. 打开控制面板<br />
-<img src="https://github.com/yf8578/Zhang-s-BioBook/raw/main/_book/chapter0/_asset\控制面板20231123141357.png" align=center alt="setting">
-1. 打开相关设置<br />
-<img src="https://github.com/yf8578/Zhang-s-BioBook/raw/main/_book/chapter0/_asset\%E6%89%93%E5%BC%80wsl20231123141427.png" align=center alt="setting">
-1. 微软商店搜索wsl安装合适的版本<br />
-<img src="https://github.com/yf8578/Zhang-s-BioBook/raw/main/_book/chapter0/_asset\msstore20231123140927.png" align=center alt="msstore">
-1. 安装完成后，打开子系统，输入用户名和密码，就可以使用了。<br />
-<img src="https://github.com/yf8578/Zhang-s-BioBook/raw/main/_book/chapter0/_asset/wsl20231123141828.png" align=ceter alt="loginwsl" width = "300%">
+### 安装虚拟机
+
+这个我个人觉得不大方便，如果想安装的话可以参考这篇推文:[超详细的VMware虚拟机安装Linux图文教程保姆级](https://blog.csdn.net/weixin\_61536532/article/details/129778310)
+
+### Windows安装子系统
+
+这里推荐使用Ubuntu子系统，因为Ubuntu子系统的安装比较简单，而且使用起来也比较方便。且推荐安装在D盘，因为D盘的读写速度比较快，而且不会占用C盘的空间。 我使用的方法是在微软商店中安装，之后再迁移到D盘中。 **安装子系统：**
+
+1.  打开控制面板\
+
+
+    <figure><img src="https://github.com/yf8578/Zhang-s-BioBook/raw/main/_book/chapter0/_asset/%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF20231123141357.png" alt="" width="563"><figcaption></figcaption></figure>
+2.  打开相关设置\
+
+
+    <figure><img src="https://github.com/yf8578/Zhang-s-BioBook/raw/main/_book/chapter0/_asset/%E6%89%93%E5%BC%80wsl20231123141427.png" alt=""><figcaption></figcaption></figure>
+3.  微软商店搜索wsl安装合适的版本\
+
+
+    <figure><img src="https://github.com/yf8578/Zhang-s-BioBook/raw/main/_book/chapter0/_asset/msstore20231123140927.png" alt=""><figcaption></figcaption></figure>
+4.  安装完成后，打开子系统，输入用户名和密码，就可以使用了。\
+
+
+    <figure><img src="../.gitbook/assets/wsl20231123141828.png" alt="" width="375"><figcaption></figcaption></figure>
+
+<figure><img src="https://github.com/yf8578/Zhang-s-BioBook/raw/main/_book/chapter0/_asset/wsl20231123141828.png" alt=""><figcaption></figcaption></figure>
 
 **迁移D盘：** [迁移wsl2子系统文件目录](https://juejin.cn/post/7024498662935904269)
 
