@@ -50,16 +50,16 @@ Kickstarted 15:19 19-Jul-2018
 
 这里推荐使用Ubuntu子系统，因为Ubuntu子系统的安装比较简单，而且使用起来也比较方便。且推荐安装在D盘，因为D盘的读写速度比较快，而且不会占用C盘的空间。 我使用的方法是在微软商店中安装，之后再迁移到D盘中。 **安装子系统：**
 
-1.  打开控制面板\\
+1.  打开控制面板
 
     <figure><img src="../.gitbook/assets/控制面板20231123141357.png" alt=""><figcaption></figcaption></figure>
-2.  打开相关设置\\
+2.  打开相关设置
 
     <figure><img src="../.gitbook/assets/打开wsl20231123141427.png" alt=""><figcaption></figcaption></figure>
-3.  微软商店搜索wsl安装合适的版本\\
+3.  微软商店搜索wsl安装合适的版本
 
     <figure><img src="../.gitbook/assets/msstore20231123140927.png" alt=""><figcaption></figcaption></figure>
-4.  安装完成后，打开子系统，输入用户名和密码，就可以使用了。\\
+4.  安装完成后，打开子系统，输入用户名和密码，就可以使用了。
 
     <figure><img src="../.gitbook/assets/wsl20231123141828 (1).png" alt=""><figcaption></figcaption></figure>
 
