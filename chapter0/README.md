@@ -18,15 +18,15 @@ Windows PowerShell
 
 安装最新的 PowerShell，了解新功能和改进！https://aka.ms/PSWindows
 
-PS C:\Users\10696> ssh zhangyifan1@192.168.61.10 -p 22
-(zhangyifan1@192.168.61.10) Password:
-(zhangyifan1@192.168.61.10) Verification code:
+PS C:\Users\10696> ssh username@192.168.61.10 -p 22
+(username@192.168.61.10) Password:
+(username@192.168.61.10) Verification code:
 Last login: Wed Nov 22 20:11:31 2023 from 172.18.160.229
 Rocks 7.0 (Manzanita)
 Profile built 15:01 19-Jul-2018
 
 Kickstarted 15:19 19-Jul-2018
-[zhangyifan1@cngb-login-0-10 13:44:28 (#╯°Д°)╯︵┻━┻ ~]$
+[username@xxx-login-0-10 13:44:28 (#╯°Д°)╯︵┻━┻ ~]$
 ```
 
 这样就登陆成功了，如果是第一次登陆，会提示你是否要接受服务器的公钥，输入yes就可以了。 如果是Macos操作是一样的,~~**可惜我没Mac。**~~ 除了电脑自带的终端，还有一些好用的第三方终端，如：
@@ -171,3 +171,7 @@ python --version
 #删除虚拟环境
 conda remove -n myenv --all
 ```
+
+## 参考：
+1. https://mp.weixin.qq.com/s/y4dwHgH8p_FGQm6_naDwXg
+2. 
