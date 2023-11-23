@@ -62,6 +62,9 @@ Kickstarted 15:19 19-Jul-2018
 
     <figure><img src="../.gitbook/assets/wsl20231123141828.png" alt="" width="375"><figcaption></figcaption></figure>
 
+
+<figure><img src="../.gitbook\chapter0\asset\wsl20231123141828.png" alt="" width="375"><figcaption></figcaption></figure>
+
 <figure><img src="https://github.com/yf8578/Zhang-s-BioBook/raw/main/_book/chapter0/_asset/wsl20231123141828.png" alt=""><figcaption></figcaption></figure>
 
 **迁移D盘：** [迁移wsl2子系统文件目录](https://juejin.cn/post/7024498662935904269)
