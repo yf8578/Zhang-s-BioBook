@@ -68,7 +68,7 @@ Kickstarted 15:19 19-Jul-2018
 ## 虚拟环境配置
 生信分析会涉及很多软件，不同软件要求的环境配置也不一样，就好比有些软件需要python 2 但有些软件需要python 3，中国有句古话，叫做~~识时务者为俊杰~~“鱼与熊掌不可兼得”，就需要我们根据不同的软件配置不同的环境。
 
-就好像在一个大房子里有很多不同的屋子，每个屋子之间相互独立，用到不同的软件时就进到不同的屋子里。
+就好像在一个大房子里有很多不同的屋子，每个屋子之间相互独立，彼此之间互不影响，当用到不同的软件时就进到不同的屋子里。
 
 ### mamba安装
 我个人感觉哈，mamba和从conda实际上是差不多的，都是包管理软件，都能创建虚拟环境，且mamba的速度比conda快很多。安装mamba的时候也会安装上conda，因此，如果不想安mamba，也可以直接看后面的教程安conda，这里讲一下如何安装mamba。
@@ -76,7 +76,7 @@ Kickstarted 15:19 19-Jul-2018
 mambaforge不在鼓励使用了，因此我们通过miniforge来安装。
 > https://github.com/conda-forge/miniforge
 
- <figure><img src="../.gitbook\assets\mambaforge20231123172100.png" alt=""><figcaption></figcaption></figure>
+ <figure><img src="../.gitbook/assets/mambaforge20231123172100.png" alt=""><figcaption></figcaption></figure>
 
  #### 安装Miniforge3
  > https://github.com/conda-forge/miniforge/releases
