@@ -48,24 +48,19 @@ Kickstarted 15:19 19-Jul-2018
 1.  打开控制面板\
 
 
-    <figure><img src="https://github.com/yf8578/Zhang-s-BioBook/raw/main/_book/chapter0/_asset/%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF20231123141357.png" alt="" width="563"><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/%E6%8E%A7%E5%88%B6%E9%9D%A2%E6%9D%BF20231123141357.png" alt="" width="563"><figcaption></figcaption></figure>
 2.  打开相关设置\
 
 
-    <figure><img src="https://github.com/yf8578/Zhang-s-BioBook/raw/main/_book/chapter0/_asset/%E6%89%93%E5%BC%80wsl20231123141427.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/%E6%89%93%E5%BC%80wsl20231123141427.png" alt=""><figcaption></figcaption></figure>
 3.  微软商店搜索wsl安装合适的版本\
 
 
-    <figure><img src="https://github.com/yf8578/Zhang-s-BioBook/raw/main/_book/chapter0/_asset/msstore20231123140927.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="../.gitbook/assets/msstore20231123140927.png" alt=""><figcaption></figcaption></figure>
 4.  安装完成后，打开子系统，输入用户名和密码，就可以使用了。\
 
 
     <figure><img src="../.gitbook/assets/wsl20231123141828.png" alt="" width="375"><figcaption></figcaption></figure>
-
-
-<figure><img src="../.gitbook\chapter0\asset\wsl20231123141828.png" alt="" width="375"><figcaption></figcaption></figure>
-
-<figure><img src="https://github.com/yf8578/Zhang-s-BioBook/raw/main/_book/chapter0/_asset/wsl20231123141828.png" alt=""><figcaption></figcaption></figure>
 
 **迁移D盘：** [迁移wsl2子系统文件目录](https://juejin.cn/post/7024498662935904269)
 
