@@ -28,13 +28,14 @@ Kickstarted 15:19 19-Jul-2018
 ```
 这样就登陆成功了，如果是第一次登陆，会提示你是否要接受服务器的公钥，输入yes就可以了。
 如果是Macos操作是一样的,~~**可惜我没Mac。**~~
-除了电脑自带的终端，还有一些好用的第三方终端，如
+除了电脑自带的终端，还有一些好用的第三方终端，如：
 1. [Tabby](https://tabby.sh/)
 2. [Xshell](https://www.netsarang.com/en/xshell/)
 3. [MobaXterm](https://mobaxterm.mobatek.net/)
+
 ......
 ### 安装虚拟机
-可以参考这篇推文:[超详细的VMware虚拟机安装Linux图文教程保姆级](https://blog.csdn.net/weixin_61536532/article/details/129778310)
+这个我个人觉得不大方便，如果想安装的话可以参考这篇推文:[超详细的VMware虚拟机安装Linux图文教程保姆级](https://blog.csdn.net/weixin_61536532/article/details/129778310)
 ### Windows安装子系统
 这里推荐使用Ubuntu子系统，因为Ubuntu子系统的安装比较简单，而且使用起来也比较方便。且推荐安装在D盘，因为D盘的读写速度比较快，而且不会占用C盘的空间。
 我使用的方法是在微软商店中安装，之后再迁移到D盘中。
@@ -49,5 +50,6 @@ Kickstarted 15:19 19-Jul-2018
 1. 安装完成后，打开子系统，输入用户名和密码，就可以使用了。<br />
 <img src="asset\wsl20231123141828.png" align=ceter alt="loginwsl" width = "300%">
 
-**迁移D盘：** https://juejin.cn/post/7024498662935904269
+**迁移D盘：** [迁移wsl2子系统文件目录](https://juejin.cn/post/7024498662935904269)
 
+## conda配置换环境
