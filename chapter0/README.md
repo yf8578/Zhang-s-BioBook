@@ -92,7 +92,7 @@ conda config --add channels bioconda
 #直接使用mamba
 mamba
 ```
-#### mambaan安装软件
+#### mamba安装软件
 ```shell
 mamba install -y fastqc 
 mamba install -y fastp
