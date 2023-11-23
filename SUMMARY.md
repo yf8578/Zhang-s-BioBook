@@ -2,6 +2,8 @@
 
 * [前言](README.md)
 * [准备工作](chapter0/README.md)
+
+## 基础知识
 * [Linux基础](chapter1/README.md)
     * [Section 1.1](chapter1/section1.1.md)
     * [Section 1.2](chapter1/section1.2.md)
