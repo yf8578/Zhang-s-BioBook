@@ -75,6 +75,7 @@ Kickstarted 15:19 19-Jul-2018
 
 mambaforge不在鼓励使用了，因此我们通过miniforge来安装。
 > https://github.com/conda-forge/miniforge
+
  <figure><img src="../.gitbook\assets\mambaforge20231123172100.png" alt=""><figcaption></figcaption></figure>
 
  #### 安装Miniforge3
