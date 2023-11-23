@@ -47,6 +47,6 @@ Kickstarted 15:19 19-Jul-2018
 1. 微软商店搜索wsl安装合适的版本<br />
 <img src=../_book/gitbook/images/msstore20231123140927.png align=center alt="msstore">
 1. 安装完成后，打开子系统，输入用户名和密码，就可以使用了。<br />
-<img src="../_book/gitbook/images/wsl20231123141828.png" align=ceter alt="loginwsl">
+<img src="../_book/gitbook/images/wsl20231123141828.png" align=ceter alt="loginwsl" width = "300" height = "200">
 
 **迁移D盘：** https://juejin.cn/post/7024498662935904269
