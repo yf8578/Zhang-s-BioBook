@@ -174,4 +174,5 @@ conda remove -n myenv --all
 
 ## 参考：
 1. https://mp.weixin.qq.com/s/y4dwHgH8p_FGQm6_naDwXg
-2. 
+2. https://cloud.tencent.com/developer/article/1617342
+3. http://47.57.89.98/detail/15/
