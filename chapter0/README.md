@@ -71,7 +71,40 @@ Kickstarted 15:19 19-Jul-2018
 就好像在一个大房子里有很多不同的屋子，每个屋子之间相互独立，用到不同的软件时就进到不同的屋子里。
 
 ### mamba安装
+我个人感觉哈，mamba和从conda实际上是差不多的，都是包管理软件，都能创建虚拟环境，且mamba的速度比conda快很多。安装mamba的时候也会安装上conda，因此，如果不想安mamba，也可以直接看后面的教程安conda，这里讲一下如何安装mamba。
 
+mambaforge不在鼓励使用了，因此我们通过miniforge来安装。
+> https://github.com/conda-forge/miniforge
+ <figure><img src="../.gitbook\assets\mambaforge20231123172100.png" alt=""><figcaption></figcaption></figure>
+
+ #### 安装Miniforge3
+ > https://github.com/conda-forge/miniforge/releases
+```shell
+#1下载miniforge
+wget https://github.com/conda-forge/miniforge/releases/download/23.3.1-1/Miniforge3-Linux-x86_64.sh
+#安装mamba
+sh Miniforge3-Linux-x86_64.sh
+#刷新
+source ~/.bashrc
+#添加软件源
+conda config --add channels bioconda
+#直接使用mamba
+mamba
+```
+#### mambaan安装软件
+```shell
+mamba install -y fastqc 
+mamba install -y fastp
+mamba install -y multiqc
+mamba install -y seqkit
+mamba install -y kraken2 
+mamba install -y krakentools 
+mamba install -y bracken 
+mamba install -y bowtie2 
+mamba install -y samtools
+mamba install -y krona
+```
+其他的命令都和conda一致，可以参考下面的conda教程。  
 
 ### conda环境配置
 conda 是一个开源的软件包管理系统和环境管理系统，用于安装多个版本的软件包及其依赖关系，并在它们之间轻松切换。 Conda 是为 Python 程序创建的，适用于 Linux，OS X 和Windows，也可以打包和分发其他软件。  
