@@ -31,3 +31,4 @@ Linux 能运行主要的 UNIX 工具软件、应用程序和网络协议。它�
 除此之外，我觉得通过命令行劈里啪啦敲代码的时候很帅，所以学习Linux也能~~装一把~~提升自己。
 
 # 参考：
+1. <https://www.runoob.com/linux/linux-intro.html>
