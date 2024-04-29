@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "50a1c3f18a50e825",
+        "id": "9d1e9a1256111288",
         "type": "tabs",
         "children": [
           {
-            "id": "f70bf485405c45c5",
+            "id": "0283f2c013d167ce",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "准备工作/README.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,8 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "126b7c7ccd45080b",
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "准备工作/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "准备工作/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "准备工作/README.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -147,8 +138,10 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f70bf485405c45c5",
+  "active": "0283f2c013d167ce",
   "lastOpenFiles": [
+    "_book/gitbook/images/apple-touch-icon-precomposed-152.png",
+    "准备工作/README.md",
     "_book/Linux基础/Linux简介.md",
     "_book/Linux基础/基本命令.md",
     "_book/Linux基础/README.md",
