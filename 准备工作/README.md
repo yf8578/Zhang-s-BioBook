@@ -175,9 +175,10 @@ conda remove -n myenv --all
 ## Jupyter 安装
 ### 通过condan安装
 像我们平常安装软件一样，我们可以通过conda来安装jupyter，里我们以JupyterLab为例。  
->[!IMPORTANT]  
->1. 注意切换到软件安装节点
->2. 安装时进入相应环境
+
+>**注意：**
+>**1. 注意切换到软件安装节点**
+>**2. 安装时进入相应环境**
 
 ```shell
 conda install anaconda::jupyterlab
