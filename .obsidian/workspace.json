@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_book/Linux基础/Linux简介.md",
+                "file": "准备工作/README.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "126b7c7ccd45080b",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_book/Linux基础/Linux简介.md",
+                "file": "准备工作/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_book/Linux基础/Linux简介.md",
+                "file": "准备工作/README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_book/Linux基础/Linux简介.md"
+                "file": "准备工作/README.md"
               }
             }
           }
@@ -148,8 +149,8 @@
   },
   "active": "f70bf485405c45c5",
   "lastOpenFiles": [
-    "_book/Linux基础/基本命令.md",
     "_book/Linux基础/Linux简介.md",
+    "_book/Linux基础/基本命令.md",
     "_book/Linux基础/README.md",
     "_book/统计学知识/README.md",
     "_book/chapter0/README.md"

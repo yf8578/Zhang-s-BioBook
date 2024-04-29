@@ -173,13 +173,30 @@ conda remove -n myenv --all
 ```
 
 ## Jupyter 安装
-### 通过conda安
-就像我们平常安装软件一样，我们可以通过conda来安装jupyter，里我们以JupyterLab为例。  
->[!IMPORTANT]
+### 通过condan安装
+像我们平常安装软件一样，我们可以通过conda来安装jupyter，里我们以JupyterLab为例。  
+>[!IMPORTANT]  
+>1. 注意切换到软件安装节点
+>2. 安装时进入相应环境
+
 ```shell
 conda install anaconda::jupyterlab
 ```
-
+**（理想状态下）** 完成安装之后运行命令，将对应的链接粘贴到本地浏览器即可：
+```shell
+jupyter-lab --jupyter-lab --no-browser --port=8890 --ip=0.0.0.0
+```
+但是，我们现在是在公司的集群上进行安装的，如果想通过本地访问，还需要将集群上的`8890`端口映射到本地。
+**而且！而且！我们想在计算节点上使用的话还需要连续映射两次**，即`本地<->login节点<->计算节点`
+这时候需要我们在本地打开终端，在里面输入以下内容：
+```shell
+ssh zhangyifan1@<login节点ip> -L 127.0.0.1:8890:127.0.0.1:8890
+```
+随后便会进入登录节点，这个时候还需要建立一次映射：
+```shell
+ssh zhangyifan1@<计算节点ip> -L 8890:127.0.0.1:8890
+```
+这样我们就将计算节点的8890端口和我们本地的8890端口映射起来了，再次运行`jupyter-lab`命令激活jupyter，将给出的链接复制到本的浏览器即可访问。
 ## 参考：
 1. <https://mp.weixin.qq.com/s/y4dwHgH8p_FGQm6_naDwXg>
 2. <https://cloud.tencent.com/developer/article/1617342>
