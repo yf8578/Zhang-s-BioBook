@@ -173,7 +173,7 @@ conda remove -n myenv --all
 ```
 
 ## Jupyter 安装
-### 通过condan安装
+### 通过conda安装
 像我们平常安装软件一样，我们可以通过conda来安装jupyter，里我们以JupyterLab为例。  
 
 >**注意：**
