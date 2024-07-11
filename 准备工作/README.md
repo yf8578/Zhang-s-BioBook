@@ -85,6 +85,9 @@ mambaforge不在鼓励使用了，因此我们通过miniforge来安装。
 wget https://github.com/conda-forge/miniforge/releases/download/23.3.1-1/Miniforge3-Linux-x86_64.sh
 #安装mamba
 sh Miniforge3-Linux-x86_64.sh
+
+#关于安装地址的选择，默认是在home路径下安装的，这里根据自身需要指定要安装的路径
+
 #刷新
 source ~/.bashrc
 #添加软件源
@@ -108,7 +111,7 @@ mamba install -y krona
 其他的命令都和conda一致，可以参考下面的conda教程。  
 
 ### conda环境配置
-conda 是一个开源的软件包管理系统和环境管理系统，用于安装多个版本的软件包及其依赖关系，并在它们之间轻松切换。 Conda 是为 Python 程序创建的，适用于 Linux，OS X 和Windows，也可以打包和分发其他软件。  
+conda 是一个开源的软件包管理系统和环境管理系统，用于安装多个版本的软件包及其依赖关系，并能欧在它们之间轻松切换。 Conda 是为 Python 程序创建的，适用于 Linux，OS X 和Windows，也可以打包和分发其他软件。  
 
 conda分为anaconda和miniconda。anaconda是包含一些常用包的版本（这里的常用不代表你常用 微笑.jpg），miniconda则是精简版，需要啥装啥，所以推荐使用miniconda。
 
@@ -185,7 +188,7 @@ conda install anaconda::jupyterlab
 ```
 **（理想状态下）** 完成安装之后运行命令，将对应的链接粘贴到本地浏览器即可：
 ```shell
-jupyter-lab --jupyter-lab --no-browser --port=8890 --ip=0.0.0.0
+jupyter-lab --no-browser --port=8890 --ip=0.0.0.0
 ```
 但是，我们现在是在公司的集群上进行安装的，如果想通过本地访问，还需要将集群上的`8890`端口映射到本地。
 **而且！而且！我们想在计算节点上使用的话还需要连续映射两次**，即`本地<->login节点<->计算节点`
@@ -198,7 +201,23 @@ ssh zhangyifan1@<login节点ip> -L 127.0.0.1:8890:127.0.0.1:8890
 ssh zhangyifan1@<计算节点ip> -L 8890:127.0.0.1:8890
 ```
 这样我们就将计算节点的8890端口和我们本地的8890端口映射起来了，再次运行`jupyter-lab`命令激活jupyter，将给出的链接复制到本的浏览器即可访问。
+
+### 问题
+#### 问题一
+这几天使用的过程中碰到了一些问题，具体的截图没有保存，但是弹出的框中有`(OperationalError('disk I/O error',))`这样的内容，心想是不是因为我们的home路径太小导致的。
+在网上也找了一些资料，自己进行了总结，最后解决了这个问题，具体方法如下：
+1. 建立新的ipython和jupyter配置目录
+![alt text](../_book/.gitbook/assets/ipython_jupyter_config.png)
+创建完成之后，将两个路径添加到环境变量中,之后再source一下
+![alt text](../_book/.gitbook/assets/ipython_jupyter_folder_config.png)
+2. 创建新的配置文件
+基本的配置配置完成后，需要将jupyter和ipython的配置文件保存到我们新建立的目录中，运行以下命令即可：
+```shell
+jupyter notebook --generate-config
+```
+做了这些操作之后，再次运行jupyter-lab，问题就解决了。
 ## 参考：
 1. <https://mp.weixin.qq.com/s/y4dwHgH8p_FGQm6_naDwXg>
 2. <https://cloud.tencent.com/developer/article/1617342>
 3. <http://47.57.89.98/detail/15/>
+4. https://stackoverflow.com/questions/49175406/jupyter-notebook-operationalerrordisk-i-o-error 
