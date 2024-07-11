@@ -206,12 +206,12 @@ ssh zhangyifan1@<计算节点ip> -L 8890:127.0.0.1:8890
 #### 问题一
 这几天使用的过程中碰到了一些问题，具体的截图没有保存，但是弹出的框中有`(OperationalError('disk I/O error',))`这样的内容，心想是不是因为我们的home路径太小导致的。
 在网上也找了一些资料，自己进行了总结，最后解决了这个问题，具体方法如下：
-1. 建立新的ipython和jupyter配置目录
-![alt text](../_book/.gitbook/assets/ipython_jupyter_config.png)
-创建完成之后，将两个路径添加到环境变量中,之后再source一下
-![alt text](../_book/.gitbook/assets/ipython_jupyter_folder_config.png)
-2. 创建新的配置文件
-基本的配置配置完成后，需要将jupyter和ipython的配置文件保存到我们新建立的目录中，运行以下命令即可：
+1. 建立新的ipython和jupyter配置目录  
+![alt text](../_book/.gitbook/assets/ipython_jupyter_config.png)  
+创建完成之后，将两个路径添加到环境变量中,之后再source一下  
+![alt text](../_book/.gitbook/assets/ipython_jupyter_folder_config.png)  
+2. 创建新的配置文件  
+基本的配置配置完成后，需要将jupyter和ipython的配置文件保存到我们新建立的目录中，运行以下命令即可：  
 ```shell
 jupyter notebook --generate-config
 ```
