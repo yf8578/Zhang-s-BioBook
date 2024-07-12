@@ -202,6 +202,16 @@ ssh zhangyifan1@<计算节点ip> -L 8890:127.0.0.1:8890
 ```
 这样我们就将计算节点的8890端口和我们本地的8890端口映射起来了，再次运行`jupyter-lab`命令激活jupyter，将给出的链接复制到本的浏览器即可访问。
 
+### 配置
+安装一些插件  
+```shell
+mamba install conda-forge::jupyterlab-lsp
+mamba install conda-forge::python-lsp-server
+
+pip install ipympl
+```
+
+
 ### 问题
 #### 问题一
 这几天使用的过程中碰到了一些问题，具体的截图没有保存，但是弹出的框中有`(OperationalError('disk I/O error',))`这样的内容，心想是不是因为我们的home路径太小导致的。
