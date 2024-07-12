@@ -216,6 +216,15 @@ ssh zhangyifan1@<计算节点ip> -L 8890:127.0.0.1:8890
 jupyter notebook --generate-config
 ```
 做了这些操作之后，再次运行jupyter-lab，问题就解决了。
+#### 问题二
+又遇到了新的问题  
+![alt text](../_book/.gitbook/assets/jupyter_.local_disk_quota_exceeded.png)  
+关于这个问题，创建一个软连接就解决了。（至少目前是这样的）
+```shell
+mkdir -p /new/path/jupyter_local
+mv /home/zhangyifan1/.local/share/jupyter/* /new/path/jupyter_local/
+ln -s /new/path/jupyter_local /home/zhangyifan1/.local/share/jupyter
+```
 ## 参考：
 1. <https://mp.weixin.qq.com/s/y4dwHgH8p_FGQm6_naDwXg>
 2. <https://cloud.tencent.com/developer/article/1617342>
