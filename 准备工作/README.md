@@ -231,7 +231,7 @@ jupyter notebook --generate-config
 ![alt text](../_book/.gitbook/assets/jupyter_.local_disk_quota_exceeded.png)  
 关于这个问题，创建一个软连接就解决了。（至少目前是这样的）
 ```shell
-mkdir -p /new/path/jupyter_local
+mkdir -p /jdfssz1/ST_HEALTH/P18Z10200N0124/zhangyifan1/jupyter_local/
 mv /home/zhangyifan1/.local/share/jupyter/* /jdfssz1/ST_HEALTH/P18Z10200N0124/zhangyifan1/jupyter_local/
 ln -s /jdfssz1/ST_HEALTH/P18Z10200N0124/zhangyifan1/jupyter_local /home/zhangyifan1/.local/share/jupyter
 ```
