@@ -232,8 +232,8 @@ jupyter notebook --generate-config
 关于这个问题，创建一个软连接就解决了。（至少目前是这样的）
 ```shell
 mkdir -p /new/path/jupyter_local
-mv /home/zhangyifan1/.local/share/jupyter/* /new/path/jupyter_local/
-ln -s /new/path/jupyter_local /home/zhangyifan1/.local/share/jupyter
+mv /home/zhangyifan1/.local/share/jupyter/* /jdfssz1/ST_HEALTH/P18Z10200N0124/zhangyifan1/jupyter_local/
+ln -s /jdfssz1/ST_HEALTH/P18Z10200N0124/zhangyifan1/jupyter_local /home/zhangyifan1/.local/share/jupyter
 ```
 ## 参考：
 1. <https://mp.weixin.qq.com/s/y4dwHgH8p_FGQm6_naDwXg>
