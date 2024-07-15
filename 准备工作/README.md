@@ -223,7 +223,7 @@ pip install ipympl
 2. 创建新的配置文件  
 基本的配置配置完成后，需要将jupyter和ipython的配置文件保存到我们新建立的目录中，运行以下命令即可：  
 ```shell
-jupyter notebook --generate-config
+jupyter lab --generate-config
 ```
 做了这些操作之后，再次运行jupyter-lab，问题就解决了。
 #### 问题二
