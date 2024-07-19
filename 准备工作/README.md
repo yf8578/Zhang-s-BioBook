@@ -100,7 +100,7 @@ mamba
 ```
 #### mamba安装软件
 ```shell
-#参考参考，根据个人需要进行安装
+#参考参考参考，根据个人需要进行安装
 mamba install -y fastqc 
 mamba install -y fastp
 mamba install -y multiqc
@@ -113,7 +113,28 @@ mamba install -y samtools
 mamba install -y krona
 ```
 其他的命令都和conda一致，可以参考下面的conda教程。  
-最好也换一下源，可以直接下载这个.condarc文件拖到自己的home路径下，然后source一下即可。
+最好也换一下源，可以直接将下面的内容粘贴到自己home路径下的.condarc文件中，然后source一下即可。
+```
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  deepmodeling: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/
+ssl_verify: false
+channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+  - defaults
+```
 
 
 ### conda环境配置
@@ -180,6 +201,22 @@ python --version
 #删除虚拟环境
 conda remove -n myenv --all
 ```
+
+## 创建R环境
+```
+#创建一个R环境，R_env可替换为自己想要的名字
+conda create -n R_env
+#进入环境
+conda activate R_env
+#安装R
+conda install conda-forge::r-base
+# 安装R包 wgcna
+conda install bioconda::r-wgcna
+```
+有些conda软件可以进入这个网址进行查找https://anaconda.org/anaconda/  
+如果是安装R包的话，需要在R包名字前面加上r-，比如安装wgcna包，搜索的时候就搜r-wgcna
+
+
 
 ## Jupyter 安装
 ### 通过conda安装
