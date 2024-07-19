@@ -113,7 +113,7 @@ mamba install -y samtools
 mamba install -y krona
 ```
 其他的命令都和conda一致，可以参考下面的conda教程。  
-最好也换一下源，可以直接将下面的内容粘贴到自己home路径下的.condarc文件中，然后source一下即可。
+最好也换一下源，可以直接将下面的内容粘贴到自己home路径下的.condarc文件中，然后`source ~/.condarc`一下即可。
 ```
 show_channel_urls: true
 default_channels:
