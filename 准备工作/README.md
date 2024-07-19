@@ -84,11 +84,11 @@ mambaforge不在鼓励使用了，因此我们通过miniforge来安装。
 这里根据自己需求选择合适版本安装即可。
 ```shell
 #下载miniforge
-wget https://github.com/conda-forge/miniforge/releases/download/24.3.0-0/Miniforge3-24.3.0-0-Linux-x86_64.sh
+wget https://github.com/conda-forge/miniforge/releases/download/24.3.0-0/Miniforge3-Linux-x86_64.sh
 #安装mamba
 #安装前记得检查是否有运行权限，可以运行下列命令更改可执行权限
-chmod +x Miniforge3-24.3.0-0-Linux-x86_64.sh
-sh Miniforge3-24.3.0-0-Linux-x86_64.sh
+chmod +x Miniforge3-Linux-x86_64.sh
+sh Miniforge3-Linux-x86_64.sh
 
 #关于安装地址的选择，默认是在home路径下安装的，这里根据自身需要指定要安装的路径
 #指定安装路径的时候需要设置一个还没创建的路径，否则会报错
