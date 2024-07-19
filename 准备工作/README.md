@@ -79,24 +79,28 @@ mambaforge不在鼓励使用了，因此我们通过miniforge来安装。
  <figure><img src="../.gitbook/assets/mambaforge20231123172100.png" alt=""><figcaption></figcaption></figure>
 
  #### 安装Miniforge3
- > https://github.com/conda-forge/miniforge/releases
+ > https://github.com/conda-forge/miniforge/releases  
+
+这里根据自己需求选择合适版本安装即可。
 ```shell
-#1下载miniforge
-wget https://github.com/conda-forge/miniforge/releases/download/23.3.1-1/Miniforge3-Linux-x86_64.sh
+#下载miniforge
+wget https://github.com/conda-forge/miniforge/releases/download/24.3.0-0/Mambaforge-24.3.0-0-Linux-x86_64.sh
 #安装mamba
-sh Miniforge3-Linux-x86_64.sh
+#安装前记得检查是否有运行权限，可以运行下列命令更改可执行权限
+chmod +x Mambaforge-24.3.0-0-Linux-x86_64.sh
+sh Mambaforge-24.3.0-0-Linux-x86_64.sh
 
 #关于安装地址的选择，默认是在home路径下安装的，这里根据自身需要指定要安装的路径
+#指定安装路径的时候需要设置一个还没创建的路径，否则会报错
 
 #刷新
 source ~/.bashrc
-#添加软件源
-conda config --add channels bioconda
 #直接使用mamba
 mamba
 ```
 #### mamba安装软件
 ```shell
+#参考参考，根据个人需要进行安装
 mamba install -y fastqc 
 mamba install -y fastp
 mamba install -y multiqc
@@ -109,6 +113,8 @@ mamba install -y samtools
 mamba install -y krona
 ```
 其他的命令都和conda一致，可以参考下面的conda教程。  
+最好也换一下源，可以直接下载这个.condarc文件拖到自己的home路径下，然后source一下即可。
+
 
 ### conda环境配置
 conda 是一个开源的软件包管理系统和环境管理系统，用于安装多个版本的软件包及其依赖关系，并能欧在它们之间轻松切换。 Conda 是为 Python 程序创建的，适用于 Linux，OS X 和Windows，也可以打包和分发其他软件。  
@@ -119,7 +125,7 @@ conda分为anaconda和miniconda。anaconda是包含一些常用包的版本（�
 
 ```shell
 wget -c https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Linux-x86_64.sh
-## 当然因为集群的网速很慢，也可以直接去官网下载，然后上传到服务器上，再运行后面的命令
+# 集群的网速很慢，也可以直接去官网下载，然后上传到服务器上，再运行后面的命令
 chmod 777 Miniconda3-latest-Linux-x86_64.sh #给执行权限
 bash Miniconda3-latest-Linux-x86_64.sh #运行
 ```
