@@ -35,4 +35,4 @@
 ***
 
 * [云平台使用](yun-ping-tai-shi-yong/README.md)
-  * [构建镜像](yun-ping-tai-shi-yong/gou-jian-jing-xiang.md)
+  * [基于conda构建个性化分析镜像](yun-ping-tai-shi-yong/ji-yu-conda-gou-jian-ge-xing-hua-fen-xi-jing-xiang.md)
