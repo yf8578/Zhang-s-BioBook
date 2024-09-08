@@ -4,9 +4,9 @@ description: 为jupyter lab配置指定版本python，R内核
 
 # 基于conda构建个性化分析镜像
 
-目前我理解的云平台上镜像主要有<mark style="color:orange;">**两种类型**</mark>，一种是只能用于来构建分析流程的，另一种是能够进行个性化分析（支持jupyter lab，能够选择不同内核），且也能够用来构建分析流程。
+目前我理解的云平台镜像主要有<mark style="color:orange;">**两种类型**</mark>，一种是只能用于来构建分析流程（WDL串各种工具），另一种是能够进行个性分析（支持jupyter lab，能够选择不同内核），且也能够用来构建分析流程。
 
-这里主要还是介绍如何<mark style="color:orange;">**基于含有conda的预设镜像**</mark>构建用于个性化分析流程的镜像。
+这里主要还是介绍如何<mark style="color:orange;">**基于含有conda的预设镜像**</mark>构建第二类镜像用于个性化分析。（像这种含有conda的镜像用起来还是很方便的，可以直接在base环境里面安装需要的工具，然后用WDL写分析流程的时候直接调用镜像就好，也不需要再配置什么环境变量。）
 
 ## 新建镜像
 
