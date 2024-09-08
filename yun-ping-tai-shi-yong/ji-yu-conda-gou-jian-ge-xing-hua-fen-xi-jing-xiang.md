@@ -12,13 +12,13 @@ description: 为jupyter lab配置指定版本python，R内核
 
 在镜像管理中选择<mark style="color:orange;">**新建镜像**</mark>
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 镜像来源有两种类型可以选择，这里选择<mark style="color:orange;">**含有conda的预设镜像stereonote**</mark>
 
 <mark style="color:red;">**注意：通过外源导入的镜像可用于项目>流程分析>工作流模块构建WDL，暂不支持用于项目>数据分析 (Stereonote) 模块。**</mark>
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
@@ -42,6 +42,8 @@ echo -e "stereonote\tALL=(ALL)\tNOPASSWD: ALL" >> /etc/sudoers
 <figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 ## 个性化配置环境
+
+
 
 ### jupyter lab添加R内核
 
@@ -101,3 +103,36 @@ python -m ipykernel install --user --name py311 --display-name "Python 3.11 (py3
 <mark style="color:red;">**注意注意注意！！！！！**</mark>
 
 <mark style="color:red;">**退出前保存当前环境为一个新的镜像，要不然前功尽弃ε=(´ο｀\*)))唉**</mark>
+
+<mark style="color:red;">**但是好像保存也没用，重新打开这个镜像我发现环境以及其中的软件是保存的，但是jupyter lab里的内核并没有。**</mark>
+
+### Python/R内核配置
+
+可以在构建镜像时Bash指令就写上创建环境，安装指定版本python/R的命令。
+
+```sh
+source /opt/conda/bin/activate
+conda create -n r441
+conda activate r441
+conda install conda-forge::r-base
+
+
+conda install conda-forge::r-irkernel
+
+R -e "IRkernel::installspec(name = 'ir441', displayname = 'R 4.4.1 (r441)')"
+
+
+conda create -n py311
+conda activate py311
+conda install python=3.11
+conda install ipykernel
+python -m ipykernel install --user --name py311 --display-name "Python 3.11 (py311)"
+```
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+<mark style="color:purple;">**进入镜像之后手动运行配置内核的命令，自行配置吧（无奈）**</mark>
+
+等之后弄明白了再更新
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
