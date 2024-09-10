@@ -6,5 +6,6 @@ description: >-
 
 # Zotero
 
-<figure><img src="../../.gitbook/assets/640.webp" alt=""><figcaption></figcaption></figure>
+官网：[https://www.zotero.org/](https://www.zotero.org/)
 
+<figure><img src="../../.gitbook/assets/640.webp" alt=""><figcaption></figcaption></figure>

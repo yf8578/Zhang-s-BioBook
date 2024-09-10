@@ -12,13 +12,13 @@ description: 为jupyter lab配置指定版本python，R内核
 
 在镜像管理中选择<mark style="color:orange;">**新建镜像**</mark>
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 镜像来源有两种类型可以选择，这里选择<mark style="color:orange;">**含有conda的预设镜像stereonote**</mark>
 
 <mark style="color:red;">**注意：通过外源导入的镜像可用于项目>流程分析>工作流模块构建WDL，暂不支持用于项目>数据分析 (Stereonote) 模块。**</mark>
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
@@ -129,10 +129,10 @@ conda install ipykernel
 python -m ipykernel install --user --name py311 --display-name "Python 3.11 (py311)"
 ```
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 <mark style="color:purple;">**进入镜像之后手动运行配置内核的命令，自行配置吧（无奈）**</mark>
 
 等之后弄明白了再更新
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>

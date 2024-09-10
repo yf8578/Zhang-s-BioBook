@@ -1,5 +1,7 @@
 # Zotero插入引文（国科大格式）
 
+<mark style="color:yellow;">**先把需要的文献导入喔**</mark>
+
 虽然Zotero自带很多引用的样式，但仔细看还是感觉怪怪的。比如这个GB/T 7714-2015的格式，当作者有多位时，显示的是一个“英文名字+‘ ’+‘等’”，比如这里展示的<mark style="color:orange;">**CHU 等, 2022。**</mark>
 
 <figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
@@ -17,5 +19,13 @@
 <figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 按照说明下载，在Zotero中添加即可。
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+添加之后可以进行样式预览：
 
 <figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
