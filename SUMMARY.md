@@ -34,5 +34,10 @@
 
 ***
 
-* [云平台使用](yun-ping-tai-shi-yong/README.md)
-  * [基于conda构建个性化分析镜像](yun-ping-tai-shi-yong/ji-yu-conda-gou-jian-ge-xing-hua-fen-xi-jing-xiang.md)
+* [BGI云平台使用](bgi-yun-ping-tai-shi-yong/README.md)
+  * [基于conda构建个性化分析镜像](bgi-yun-ping-tai-shi-yong/ji-yu-conda-gou-jian-ge-xing-hua-fen-xi-jing-xiang.md)
+
+## 实用工具
+
+* [Zotero](shi-yong-gong-ju/zotero/README.md)
+  * [Zotero插入引文（国科大格式）](shi-yong-gong-ju/zotero/zotero-cha-ru-yin-wen-guo-ke-da-ge-shi.md)
