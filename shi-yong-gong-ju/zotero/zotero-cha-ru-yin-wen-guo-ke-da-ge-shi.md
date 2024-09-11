@@ -29,3 +29,13 @@
 添加之后可以进行样式预览：
 
 <figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+
+插入参考文献之后在末尾生成文献列表，需要点击“Add/Edit Bibliography”
+
+<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+
+插入的参考文献都是以域代码的形式存在于Word文档中的，之前遇到过打开乱码的情况，所以个人建议：
+
+<mark style="color:red;">全部编辑完之后在word里面去除引用之间的链接（去除之后如果对引用再进行改动，这些是不会自动更新的，</mark><mark style="color:purple;">**建议另存一份，另存一份，另存一份！！！！！！！**</mark><mark style="color:red;">）</mark>
+
+<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
