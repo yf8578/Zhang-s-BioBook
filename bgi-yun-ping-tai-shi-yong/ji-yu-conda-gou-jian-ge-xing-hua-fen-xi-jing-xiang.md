@@ -4,7 +4,7 @@ description: 为jupyter lab配置指定版本python，R内核
 
 # 基于conda构建个性化分析镜像
 
-目前我理解的云平台镜像主要有<mark style="color:orange;">**两种类型**</mark>，一种是只能用于来构建分析流程（WDL串各种工具），另一种是能够进行个性分析（支持jupyter lab，能够选择不同内核），且也能够用来构建分析流程。
+知道解决方案目前我理解的云平台镜像主要有<mark style="color:orange;">**两种类型**</mark>，一种是只能用于来构建分析流程（WDL串各种工具），另一种是能够进行个性分析（支持jupyter lab，能够选择不同内核），且也能够用来构建分析流程。
 
 这里主要还是介绍如何<mark style="color:orange;">**基于含有conda的预设镜像**</mark>构建第二类镜像用于个性化分析。（像这种含有conda的镜像用起来还是很方便的，可以直接在base环境里面安装需要的工具，然后用WDL写分析流程的时候直接调用镜像就好，也不需要再配置什么环境变量。）
 
@@ -72,8 +72,11 @@ conda install conda-forge::r-irkernel
 
 安装完 `r-irkernel` 后，将这个环境中的 R kernel 安装到 `base` 环境中的 Jupyter 中：
 
-<pre class="language-sh"><code class="lang-sh"><strong>R -e "IRkernel::installspec(name = 'ir441', displayname = 'R 4.4.1 (r441)')"
-</strong></code></pre>
+<pre class="language-sh"><code class="lang-sh"><strong>#下面这条命令能将内核添加到jupyterlab中，但是保存为新镜像之后第二次使用还要重新安装内核
+</strong><strong># R -e "IRkernel::installspec(name = 'ir441', displayname = 'R 4.4.1 (r441)')"
+</strong><strong>#下面是最新的命令，多了一个参数 user = FALSE
+</strong>R -e "IRkernel::installspec(name = 'ir441', displayname = 'R 4.4.1 (r441)', user = FALSE)"
+</code></pre>
 
 * `name = 'ir441'`：给这个 kernel 起一个名称（`ir441`），方便区分。
 * `displayname = 'R 4.4.1 (r441)'`：Jupyter 中显示的名称。
@@ -88,13 +91,15 @@ conda install conda-forge::r-irkernel
 
 和之前操作差不多，创建一个新的虚拟环境，安装指定版本的python，内核，进行配置即可，可以参照下面的代码。
 
-```
-conda create -n py311
+<pre class="language-sh"><code class="lang-sh">conda create -n py311
 conda activate py311
 conda install python=3.11
 conda install ipykernel
-python -m ipykernel install --user --name py311 --display-name "Python 3.11 (py311)"
-```
+#下面这个命令也要按照最新的来
+# python -m ipykernel install --user --name py311 --display-name "Python 3.11 (py311)"
+<strong>#这样可以保证将内核添加在/opt/conda这个路径下面，稳定访问
+</strong>python -m ipykernel install --name py312 --display-name "Python 3.12 (py312)" --prefix=/opt/conda
+</code></pre>
 
 <figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
@@ -104,7 +109,9 @@ python -m ipykernel install --user --name py311 --display-name "Python 3.11 (py3
 
 <mark style="color:red;">**退出前保存当前环境为一个新的镜像，要不然前功尽弃ε=(´ο｀\*)))唉**</mark>
 
-<mark style="color:red;">**但是好像保存也没用，重新打开这个镜像我发现环境以及其中的软件是保存的，但是jupyter lab里的内核并没有。**</mark>
+<mark style="color:red;">**但是好像保存也没用，重新打开这个镜像我发现环境以及其中的软件是保存的，但是jupyter lab里的内核并没有。**</mark>   &#x20;
+
+<mark style="color:purple;">**命令更新过之后就可以稳定使用内核啦**</mark>
 
 ### Python/R内核配置
 
@@ -119,20 +126,20 @@ conda install conda-forge::r-base
 
 conda install conda-forge::r-irkernel
 
-R -e "IRkernel::installspec(name = 'ir441', displayname = 'R 4.4.1 (r441)')"
+R -e "IRkernel::installspec(name = 'ir441', displayname = 'R 4.4.1 (r441)', user = FALSE)"
 
 
 conda create -n py311
 conda activate py311
 conda install python=3.11
 conda install ipykernel
-python -m ipykernel install --user --name py311 --display-name "Python 3.11 (py311)"
+python -m ipykernel install --name py312 --display-name "Python 3.12 (py312)" --prefix=/opt/conda
 ```
 
 <figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-<mark style="color:purple;">**进入镜像之后手动运行配置内核的命令，自行配置吧（无奈）**</mark>
+<mark style="color:purple;">**进入镜像之后手动运行配置内核的命令，自行配置吧（无奈）（上面看新命令）**</mark>
 
-等之后弄明白了再更新
+等之后弄明白了再更新（已经更新）
 
 <figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
